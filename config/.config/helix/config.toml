@@ -16,3 +16,6 @@ ret = ["move_line_down"]
 "C-]" = "jump_view_right"
 "C-[" = "jump_view_left"
 Cmd-r = [":write", ":config-reload"]
+
+[editor.file-picker]
+hidden = false
