@@ -1,0 +1,45 @@
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+
+[[language]]
+name = "python"
+language-servers = ["ruff", "pylsp", "ty"]
+formatter = ["ruff"]
+
+[language-server.ruff.config.settings]
+line-length = 90
+exclude = [".git", ".venv", "_pycache_", ".pyc", "dist", ".html"]
+
+[language-server.ruff.config.settings.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "RUF", # ruff-specific rules
+]
+ignore = ["RUF012"]
+fixable = ["ALL"]
+unfixable = []
+extend-select = ["E501"]
+
+[language-server.ruff.config.settings.format]
+quote-style = "double"
+
+[language-server.ruff.config.settings.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+known-first-party = ["api", "users", "blackboard"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[language-server.pylsp.config.pylsp]
+plugins.ruff.enabled = true
+plugins.black.enabled = true

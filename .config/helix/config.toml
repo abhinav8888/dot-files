@@ -1,0 +1,18 @@
+theme = "base16_terminal"
+
+[editor]
+true-color = true
+line-number = "relative"
+
+[editor.lsp]
+display-messages = true
+
+[editor.statusline]
+center = ["spinner", "version-control"]
+
+
+[keys.normal]
+ret = ["move_line_down"]
+"C-]" = "jump_view_right"
+"C-[" = "jump_view_left"
+Cmd-r = [":write", ":config-reload"]
