@@ -3,19 +3,42 @@ theme = "base16_terminal"
 [editor]
 true-color = true
 line-number = "relative"
+mouse = true
 
 [editor.lsp]
 display-messages = true
 
 [editor.statusline]
-center = ["spinner", "version-control"]
+center = ["version-control", "separator", "file-type"]
+separator = " |"
 
+[editor.auto-save]
+focus-lost = true
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
 
 [keys.normal]
-ret = ["move_line_down"]
 "C-]" = "jump_view_right"
 "C-[" = "jump_view_left"
 Cmd-r = [":write", ":config-reload"]
 
-[editor.file-picker]
-hidden = false
+# [keys.select]
+# C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+Cmd-c = "@XdkP"
+C-j = "@X\"1dj\"1P;"
+C-k = "@X\"1dk\"1P;"
+Cmd-v = ["select_register"]
+# C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.select]
+C-j = "@X\"1dj\"1p"
+C-k = "@X\"1dk\"1p"
