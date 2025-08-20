@@ -1,0 +1,9 @@
+theme = catppuccin-frappe
+#theme = dracula
+#theme = Duotone Dark
+theme = tokyonight
+cursor-style=block
+cursor-color="#DA6C6C"
+background-opacity=0.99
+shell-integration-features = no-cursor
+keybind = shift+enter=text:\n
