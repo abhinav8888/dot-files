@@ -1,0 +1,8 @@
+Add following lines to your ~/.zshrc
+
+```
+ZSH_CONFIG_DIR="$HOME/.zsh"
+for config_file in $ZSH_CONFIG_DIR/*.zsh; do
+  source $config_file
+done
+```
