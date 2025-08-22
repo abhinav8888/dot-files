@@ -3,6 +3,7 @@ format = """
 $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
+$git_status\
 [](fg:#FCA17D bg:#86BBD8)\
 $c\
 $elixir\
@@ -24,6 +25,7 @@ $time\
 [ ](fg:#33658A)\
 \n $character
 """
+right_format = "$cmd_duration"
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
@@ -150,3 +152,7 @@ disabled = false
 time_format = "%R"             # Hour:Minute Format
 style = "bg:#33658A"
 format = '[ ♥ $time ]($style)'
+
+[cmd_duration]
+format = ' [$duration]($style)'
+min_time = 1_000

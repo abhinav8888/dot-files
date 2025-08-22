@@ -4,6 +4,11 @@ theme = catppuccin-frappe
 theme = tokyonight
 cursor-style=block
 cursor-color="#DA6C6C"
-background-opacity=0.99
+cursor-color = "#DA627D"
+background-opacity=0.95
 shell-integration-features = no-cursor
 keybind = shift+enter=text:\n
+window-padding-x = 2
+keybind = cmd+shift+f=write_screen_file:open
+keybind = global:cmd+shift+.=toggle_quick_terminal
+window-decoration = false
