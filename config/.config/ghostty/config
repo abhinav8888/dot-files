@@ -12,3 +12,4 @@ window-padding-x = 2
 keybind = cmd+shift+f=write_screen_file:open
 keybind = global:cmd+shift+.=toggle_quick_terminal
 window-decoration = true
+font-family = 'Fira Code Retina'

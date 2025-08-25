@@ -4,9 +4,11 @@ theme = "base16_new"
 true-color = true
 line-number = "relative"
 mouse = true
+color-modes = true
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [editor.statusline]
 center = ["version-control", "separator", "file-type"]
