@@ -1,4 +1,4 @@
-theme = "base16_terminal"
+theme = "base16_new"
 
 [editor]
 true-color = true
@@ -24,21 +24,24 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+hidden = true
 
 [keys.normal]
+Cmd-u = ":reset-diff-change"
+
 "C-]" = "jump_view_right"
 "C-[" = "jump_view_left"
-Cmd-r = [":write", ":config-reload"]
-
-# [keys.select]
-# C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-Cmd-c = "@XdkP"
-C-j = "@X\"1dj\"1P;"
+Cmd-s = ":write"
+C-r = ":config-reload"
+"Cmd-c" = ":clipboard-yank"
+"Cmd-v" = ":clipboard-paste-before"
 C-k = "@X\"1dk\"1P;"
-Cmd-v = ["select_register"]
-# C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-j = "@X\"1dj\"1P;"
 
 [keys.select]
-C-j = "@X\"1dj\"1p"
-C-k = "@X\"1dk\"1p"
+C-j = "@X\"1dj\"1P"
+C-k = "@X\"1dk\"1P"
+Cmd-c = ":clipboard-yank"
+
+[keys.insert]
+"C-v" = ":clipboard-paste-before"
