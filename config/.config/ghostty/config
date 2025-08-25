@@ -1,11 +1,11 @@
-theme = catppuccin-frappe
+# theme = catppuccin-frappe
 #theme = dracula
 #theme = Duotone Dark
 theme = tokyonight
 cursor-style=block
 cursor-color="#DA6C6C"
 cursor-color = "#DA627D"
-background-opacity=0.95
+background-opacity=0.99
 shell-integration-features = no-cursor
 keybind = shift+enter=text:\n
 window-padding-x = 2

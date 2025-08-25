@@ -1,0 +1,32 @@
+[general]
+import = ["~/.config/alacritty/themes/themes/coolnight.toml"]
+
+[env]
+TERM = "xterm-256color"
+TERMINAL_INFO = "ALACRITTY"
+
+[window]
+padding.x = 5
+padding.y = 5
+
+# decorations = "Buttonless"
+
+opacity = 0.8
+blur = true
+
+option_as_alt = "Both"
+
+[scrolling]
+history = 100000
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
+size = 14
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewTab"},
+  { key = "1", mods = "Control", action = "SelectPreviousTab" },
+  { key = "2", mods = "Control", action = "SelectNextTab" },
+  
+]
