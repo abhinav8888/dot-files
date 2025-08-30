@@ -7,6 +7,7 @@ args = ["server"]
 name = "python"
 language-servers = ["ruff", "pylsp", "ty"]
 formatter = ["ruff"]
+auto-format = true
 
 [language-server.ruff.config.settings]
 line-length = 90
