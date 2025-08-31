@@ -5,6 +5,7 @@ true-color = true
 line-number = "relative"
 mouse = true
 color-modes = true
+bufferline = "multiple"
 
 [editor.lsp]
 display-messages = true
@@ -47,3 +48,7 @@ Cmd-c = ":clipboard-yank"
 
 [keys.insert]
 "C-v" = ":clipboard-paste-before"
+A-left = "move_prev_word_end"
+A-right = "move_next_word_start"
+Cmd-left = "goto_line_start"
+Cmd-right = "goto_line_end"
