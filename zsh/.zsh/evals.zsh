@@ -1,6 +1,3 @@
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
-if [ "$TERMINAL_INFO" != "ALACRITTY" ]; then
-  eval "$(starship init zsh)"
-fi
+eval "$(oh-my-posh init zsh --config '$HOME/.config/themes/m365.yaml')"

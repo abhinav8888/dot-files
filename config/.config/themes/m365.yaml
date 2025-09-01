@@ -1,0 +1,85 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+palette:
+    blush: '#DA627D'
+    plum: '#9A348E'
+    salmon: '#FCA17D'
+    sky: '#86BBD8'
+    tan: '#CC3802'
+    teal: '#047E84'
+    teal_blue: '#33658A'
+    white: '#FFFFFF'
+transient_prompt:
+  background: transparent
+  foreground: p:salmon
+  template: "{{ .Shell }} ➜ "
+upgrade:
+    source: cdn
+    interval: 168h
+    auto: false
+    notice: false
+blocks:
+    - type: rprompt
+      alignment: left
+      segments:
+        - leading_diamond: 
+          template: '{{ if .Env.PNPPSHOST }}  {{ .Env.PNPPSHOST }} {{ end }}'
+          foreground: p:white
+          background: p:tan
+          type: text
+          style: diamond
+        - template: '{{ if .Env.PNPPSSITE }}  {{ .Env.PNPPSSITE }}{{ end }}'
+          foreground: p:white
+          powerline_symbol: 
+          background: p:teal
+          type: text
+          style: powerline
+        - trailing_diamond: 
+          template: '{{ if .Env.PNPPSSITE }} {{ end }}'
+          foreground: p:white
+          background: p:teal
+          type: text
+          style: diamond
+    - type: prompt
+      alignment: left
+      segments:
+        - leading_diamond: 
+          template: '{{ .Icon }} '
+          foreground: p:white
+          background: p:plum
+          type: os
+          style: diamond
+        - properties:
+            style: folder
+          template: ' {{ .Path }} '
+          foreground: p:white
+          powerline_symbol: 
+          background: p:blush
+          type: path
+          style: powerline
+        - properties:
+            branch_icon: ""
+            fetch_status: false
+            fetch_upstream_icon: true
+          template: ' ➜ ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}) '
+          foreground: p:white
+          powerline_symbol: 
+          background: p:salmon
+          type: git
+          style: powerline
+        - template: '  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} '
+          foreground: p:white
+          powerline_symbol: 
+          background: p:sky
+          type: node
+          style: powerline
+        - properties:
+            time_format: "15:04"
+          trailing_diamond: 
+          template: ' ♥ {{ .CurrentDate | date .Format }} '
+          foreground: p:white
+          background: p:teal_blue
+          type: time
+          style: diamond
+version: 3
+final_space: true

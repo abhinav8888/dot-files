@@ -8,8 +8,8 @@ upgrade:
     notice: false
 transient_prompt:
   background: transparent
-  foreground: "#ffffff"
-  template: "{{ .Shell }}> "
+  foreground: "#39ff14"  # Neon Green
+  template: "{{ .Shell }} ➜ "
 blocks:
     - type: prompt
       alignment: left
