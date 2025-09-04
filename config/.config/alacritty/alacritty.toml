@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/themes/coolnight.toml"]
+import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -9,9 +9,9 @@ TERMINAL_INFO = "ALACRITTY"
 padding.x = 5
 padding.y = 5
 
-# decorations = "Buttonless"
+# decorations = "Transparent"
 
-opacity = 0.8
+opacity = 0.95
 blur = true
 
 option_as_alt = "Both"
@@ -21,12 +21,15 @@ history = 100000
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
-size = 14
+size = 12
 
 [keyboard]
 bindings = [
   { key = "N", mods = "Control|Shift", action = "CreateNewTab"},
   { key = "1", mods = "Control", action = "SelectPreviousTab" },
   { key = "2", mods = "Control", action = "SelectNextTab" },
-  
+  { key = "Left",  mods = "Alt",    chars = "\u001bb" },
+  { key = "Right", mods = "Alt",    chars = "\u001bf" },
+  { key = "Left",  mods = "Command", chars = "\u0001" },
+  { key = "Right", mods = "Command", chars = "\u0005" }, 
 ]

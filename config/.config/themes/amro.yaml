@@ -8,39 +8,72 @@ upgrade:
     notice: false
 transient_prompt:
   background: transparent
-  foreground: "#39ff14"  # Neon Green
-  template: "{{ .Shell }} ➜ "
+  foreground: "#45F1C2"  # Neon Green
+  template: "➜ "
 blocks:
     - type: prompt
       alignment: left
       segments:
-        - template:  {{ .UserName }} on
+        - template: "╭─ {{ .Icon }}"
           foreground: '#45F1C2'
-          type: session
+          type: os
           style: plain
-        - properties:
-            folder_separator_icon: /
-            style: full
+        - type: path
+          properties:
+            folder_separator_icon: "/"
+            style: agnoster
           template: '  {{ .Path }} '
-          foreground: '#0CA0D8'
-          type: path
-          style: plain
+          foreground: "#45F1E3"
+        - type: sysinfo
+          foreground: "#45F1C2"
+          template: "  {{ round .PhysicalPercentUsed .Precision }}% "
+          properties:
+            precision: 2
+          style: diamond
         - properties:
             fetch_upstream_icon: true
-          template: '{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
-          foreground: '#14A5AE'
+          template: "{{ .UpstreamIcon }} {{ .HEAD }} "
+          foreground: '#45F1C2'
           powerline_symbol: 
           type: git
           style: plain
     - type: prompt
+      alignment: right
+      segments:
+        - template: "{{ if .Venv }}  ({{ .Venv }}) {{ end }}"
+          type: python
+          style: powerline
+          foreground: "#45F1C2"
+          properties:
+            display_mode: always
+          home_enabled: true
+        # - type: nba
+        #   background: "#e9ac2f"
+        #   foreground: "#8748dc"
+        #   leading_diamond: 
+        #   style: diamond
+        #   trailing_diamond: 
+        #   properties:
+        #     team: LAL
+        #     http_timeout: 1500
+        - type: time
+          style: plain
+          foreground: '#45F1C2'
+          properties:
+            time_format: 15:04:05
+      filler: "{{ if .Overflow }}{{ else }}.{{ end }}"
+      overflow: break
+      leading_diamond: ""
+
+    - type: prompt
       alignment: left
       segments:
-        - template: ' '
+        - template: '╰─  '
           foreground: '#cd5e42'
           type: root
           style: plain
-        - template: '# '
-          foreground: '#CD4277'
+        - template: "╰─ {{ if eq .Code 0}} {{ else }} {{ end }}"
+          foreground: '#45F1C2'
           type: text
           style: plain
       newline: true
