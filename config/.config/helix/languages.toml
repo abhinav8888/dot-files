@@ -44,3 +44,23 @@ section-order = [
 plugins.ruff.enabled = true
 plugins.black.enabled = true
 
+
+[[language]]
+name = "hcl"
+scope = "source.hcl"
+file-types = ["tf", "tfvars", "tofu"]
+roots = ["."]
+language-servers = ["tofu-ls"]
+formatter = { command = "tofu", args = ["fmt", "-"] }
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.tofu-ls]
+command = "/home/ubuntu/.local/bin/tofu-ls"
+args = ["serve"]
+
+[[grammar]]
+name = "hcl"
+source = { git = "https://github.com/tree-sitter/tree-sitter-hcl", rev = "3e1e5f73b9a07b8f2b2b0b9b8b2b0b9b8b2b0b9" }
+
+
