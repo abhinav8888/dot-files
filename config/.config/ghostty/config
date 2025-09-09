@@ -5,7 +5,7 @@ theme = tokyonight
 cursor-style=block
 cursor-color="#DA6C6C"
 cursor-color = "#DA627D"
-background-opacity=0.99
+background-opacity=0.9995
 shell-integration-features = no-cursor
 keybind = shift+enter=text:\n
 window-padding-x = 2
@@ -13,3 +13,6 @@ keybind = cmd+shift+f=write_screen_file:open
 keybind = global:cmd+shift+.=toggle_quick_terminal
 window-decoration = true
 font-family = 'Fira Code Retina'
+window-padding-y = 10
+window-padding-x = 10
+window-padding-balance = true

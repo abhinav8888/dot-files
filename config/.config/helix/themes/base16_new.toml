@@ -7,4 +7,4 @@ inherits = "base16_terminal"
 "ui.cursorline.primary" = { underline = { color = "light-gray", style = "line" } }
 "ui.cursorline.secondary" = { underline = { color = "light-gray", style = "line" } }
 "ui.cursorcolumn.primary" = { bg = "gray" }
-"ui.cursorcolumn.secondary" = { bg = "gray" }
+# "ui.cursorcolumn.secondary" = { bg = "gray" }

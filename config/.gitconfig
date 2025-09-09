@@ -1,0 +1,16 @@
+[user]
+	name = Kumar Abhinav
+	email = abhinav9011032@gmail.com
+[core]
+	editor = hx
+	compression = 9
+	whitespace = trailing-space
+[branch]
+    sort = -committerdate
+[column]
+	ui = auto
+[pull]
+	rebase = true
+[maintenance]
+    auto = true
+    strategy = incremental
