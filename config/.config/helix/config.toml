@@ -28,12 +28,15 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
-Cmd-u = ":reset-diff-change"
+A-S-u = ":reset-diff-change"
 
 "C-]" = "jump_view_right"
 "C-[" = "jump_view_left"
-Cmd-s = ":write"
+C-s = ":write"
 C-r = ":config-reload"
 "Cmd-c" = ":clipboard-yank"
 "Cmd-v" = ":clipboard-paste-before"
@@ -43,7 +46,7 @@ C-j = "@X\"1dj\"1P;"
 [keys.select]
 C-j = "@X\"1dj\"1P"
 C-k = "@X\"1dk\"1P"
-Cmd-c = ":clipboard-yank"
+# Meta-c = ":clipboard-yank"
 
 [keys.insert]
 "C-v" = ":clipboard-paste-before"
