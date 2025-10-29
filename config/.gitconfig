@@ -7,8 +7,6 @@
 	whitespace = trailing-space
 [branch]
     sort = -committerdate
-[column]
-	ui = auto
 [pull]
 	rebase = true
 [maintenance]
