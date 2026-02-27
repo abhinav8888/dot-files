@@ -31,8 +31,6 @@ select = "underline"
 hidden = false
 
 [keys.normal]
-Cmd-u = ":reset-diff-change"
-
 "C-]" = "jump_view_right"
 "C-[" = "jump_view_left"
 Cmd-s = ":write"
@@ -53,3 +51,17 @@ A-left = "move_prev_word_end"
 A-right = "move_next_word_start"
 Cmd-left = "goto_line_start"
 Cmd-right = "goto_line_end"
+
+
+[keys.insert.j]
+j = "normal_mode"
+
+[keys.normal.space.g]
+f = "changed_file_picker"
+r = ":reset-diff-change"
+# inline blame
+b = ":run-shell-command ~/.config/helix/utils/blame_line_pretty.sh %{buffer_name} %{cursor_line}"
+# full last commit in the line changes for the file
+B = ':open %sh{~/.config/helix/utils/blame_file_pretty.sh %{buffer_name} %{cursor_line}}'
+# inline hunk changes
+h = ':run-shell-command ~/.config/helix/utils/git-hunk.sh %{buffer_name} %{cursor_line} 3' 

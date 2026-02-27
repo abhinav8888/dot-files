@@ -2,7 +2,7 @@
 	name = Kumar Abhinav
 	email = abhinav9011032@gmail.com
 [core]
-	editor = hx
+	editor = nvim
 	compression = 9
 	whitespace = trailing-space
 [branch]
