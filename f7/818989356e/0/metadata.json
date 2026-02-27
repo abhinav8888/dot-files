@@ -1,0 +1,38 @@
+{
+  "cli_version": "0.4.8",
+  "checkpoint_id": "f7818989356e",
+  "session_id": "53f8f3d1-9821-4fb3-b14a-a68f093c34ae",
+  "strategy": "manual-commit",
+  "created_at": "2026-02-27T22:13:34.286546Z",
+  "branch": "main",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "zsh/.zsh/functions.zsh",
+    "claude/.claude/skills/lint/SKILL.md",
+    "claude/.claude/skills/review/SKILL.md",
+    "config/.config/helix/config.toml",
+    "config/.gitconfig",
+    "claude/.claude/agents/code-reviewer.md",
+    "claude/.claude/settings.env",
+    "claude/.claude/skills/deep-review/SKILL.md",
+    "zsh/.zsh/evals.zsh"
+  ],
+  "agent": "Claude Code",
+  "turn_id": "9703ca10b658",
+  "token_usage": {
+    "input_tokens": 7,
+    "cache_creation_tokens": 13180,
+    "cache_read_tokens": 79386,
+    "output_tokens": 626,
+    "api_call_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-02-27T22:13:34.244971Z",
+    "agent_lines": 603,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 603,
+    "agent_percentage": 100
+  }
+}

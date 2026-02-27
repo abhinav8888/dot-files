@@ -1,0 +1,9 @@
+commit and push my changes with a nice message
+
+---
+
+[Request interrupted by user]
+
+---
+
+Only staged chages

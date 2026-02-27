@@ -1,0 +1,34 @@
+{
+  "cli_version": "0.4.8",
+  "checkpoint_id": "f7818989356e",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "claude/.claude/agents/code-reviewer.md",
+    "claude/.claude/settings.env",
+    "claude/.claude/skills/deep-review/SKILL.md",
+    "claude/.claude/skills/lint/SKILL.md",
+    "claude/.claude/skills/review/SKILL.md",
+    "config/.config/helix/config.toml",
+    "config/.gitconfig",
+    "zsh/.zsh/evals.zsh",
+    "zsh/.zsh/functions.zsh"
+  ],
+  "sessions": [
+    {
+      "metadata": "/f7/818989356e/0/metadata.json",
+      "transcript": "/f7/818989356e/0/full.jsonl",
+      "context": "/f7/818989356e/0/context.md",
+      "content_hash": "/f7/818989356e/0/content_hash.txt",
+      "prompt": "/f7/818989356e/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 7,
+    "cache_creation_tokens": 13180,
+    "cache_read_tokens": 79386,
+    "output_tokens": 626,
+    "api_call_count": 3
+  }
+}
