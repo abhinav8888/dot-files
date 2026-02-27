@@ -1,0 +1,17 @@
+commit and push my changes with a nice message
+
+---
+
+[Request interrupted by user]
+
+---
+
+Only staged chages
+
+---
+
+Update my tmux config so that cntrl+b persists for 15 seconds and keypresses pressed after that are piped to tmux
+
+---
+
+commit and push the changes
