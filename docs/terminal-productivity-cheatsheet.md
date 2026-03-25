@@ -62,13 +62,6 @@
 
 ### Helix — Additional Tips
 
-**Bemol integration (for Amazon Brazil builds):**
-
-```
-bemol --watch
-bb proxy
-```
-
 **LSP health check:** `hx --health go` (or any language)
 
 **Built-in tutor:** `:tutor` inside Helix
@@ -147,7 +140,7 @@ s           — select regex matches within selection
 | Change directory | `Alt + C` |
 | Insert file path | `Ctrl + T` |
 | Pipe anything | `cat log.txt \| fzf` |
-| Kill a process | `kill -9 $(ps aux \| fzf \| awk '{print $2}')` |
+| Kill a process | `kill -9 **` + tab (fzf autocomplete) |
 | Git branch switch | `git branch \| fzf \| xargs git checkout` |
 | Open in editor | `hx $(fzf)` |
 
@@ -230,19 +223,6 @@ Ghostty is a fast, feature-rich, cross-platform terminal emulator with platform-
 
 ---
 
-## Navi (Interactive Cheatsheet)
-
-**Site:** https://github.com/denisidoro/navi
-
-An interactive cheatsheet tool for the command-line. Browse through cheatsheets and execute commands with dynamically suggested argument values.
-
-| What | How |
-|------|-----|
-| Launch | `navi` |
-| Custom config | https://github.com/denisidoro/navi/blob/master/docs/configuration/README.md |
-
----
-
 ## LSD (Modern `ls`)
 
 **Site:** https://github.com/lsd-rs/lsd
@@ -299,30 +279,15 @@ fzf --preview 'head -50 {}'
 
 ---
 
-## Quick Install Summary
+## Quick Install
+
+All tools can be installed via the included `Brewfile`:
 
 ```bash
-# Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Starship
-curl -sS https://starship.rs/install.sh | sh
-
-# Helix
-sudo apt install helix  # or: brew install helix
-
-# Zoxide
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-
-# Fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-
-# Ripgrep
-sudo apt install ripgrep  # or: brew install ripgrep
-
-# k9s
-brew install derailed/k9s/k9s  # or: sudo snap install k9s
+brew bundle --file=Brewfile
 ```
+
+Or run `./bootstrap.sh` for full setup including symlinks and shell configuration.
 
 ---
 
@@ -334,21 +299,6 @@ alias grep=rg
 alias lg='lazygit'
 alias tnstar='cp ~/.config/tk_starship.toml ~/.config/starship.toml'
 alias ptstar='cp ~/.config/starship_pastel.toml ~/.config/starship.toml'
-```
-
----
-
-## Recommended Shell Init
-
-```bash
-eval "$(zoxide init zsh)"
-source <(fzf --zsh)
-
-# oh-my-posh for supported terminals (Ghostty, WezTerm, Alacritty)
-local _omp_terminals=(ghostty WezTerm alacritty)
-if (( ${_omp_terminals[(Ie)$TERM_PROGRAM]} )); then
-  eval "$(oh-my-posh init zsh --config '~/.config/themes/amro.yaml')"
-fi
 ```
 
 ---
