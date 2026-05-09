@@ -16,3 +16,5 @@ font-family = 'Fira Code Retina'
 window-padding-y = 10
 window-padding-x = 10
 window-padding-balance = true
+clipboard-read = allow
+clipboard-write = allow
